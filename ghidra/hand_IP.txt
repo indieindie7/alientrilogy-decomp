@@ -1,0 +1,6 @@
+0x060023e6 func ip_WaitVdp2Handshake hand provisional sets flag then waits until cleared
+0x0600245c func ip_FillShorts hand provisional fills halfword buffer with value
+0x060024d8 func ip_SetVdp2ColorOffsetAll hand provisional writes same value to three vdp2 offset regs
+0x06002510 func ip_FadeVdp2ColorOffset hand provisional steps colour offset between limits waiting each step
+0x06002594 func ip_InitVdp2Display hand provisional clears vdp2 table, copies 8 regs, sets display regs
+0x0600270a func ip_SetVdp2RegBitsByCase hand provisional bit-field register write by case index

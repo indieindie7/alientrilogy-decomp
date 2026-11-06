@@ -1,0 +1,117 @@
+060045b6 debug_PrintVdp1Slot128Table prints "slot128 at %x" entries
+060047bc debug_PrintVdp1SlotFlags prints slotflags per slot
+0600487c demo_LoadDemoGfxFiles loads \GFX\DEMOxxx.BIN set
+06006aac list_AllocNodeAndLink allocates 2-word node and links it
+0600dd44 map_GetTileActionAt tile lookup by x>>9,y>>9 then jump-table dispatch
+06007438 password_DecodeString xor 0x1f decode of stored password text
+06007466 password_CheckEntered checks entered password (FLYT0) and sets flags
+06007572 password_BuildDisplayString builds password string from value
+060077e0 menu_DrawExitItem draws Exit menu entry
+060086c8 backup_LoadSlotFromCard loads save slot from backup RAM/card
+06008762 backup_GetSlotLabel copies slot label or Unused
+060089a2 backup_SaveSlotToCard saves slot to card ("Game Saved")
+0600c310 model_LoadBox2SatData parses box2sat processed model data
+0600c96e sprite_QueueEntry queues sprite, TOO MANY SPRITES check
+0600cc10 gfx_ResetTableAndRebuild init identity table then rebuild
+0600d96e mesh_BuildVertexLists builds vertex lists ("vertice start")
+0600e31c mesh_UploadVertices uploads vertices ("vindex")
+0600e794 mesh_CheckVertexMatch compares vertex, prints failedx/failedy
+06010de6 enemy_DecodeAndSpawnCheck decode table then spawn warnings
+06011d20 gfx_AllocCommandBlock advances command pointer 0x10
+06016208 hazard_SteamValveStep steam valve / flame jet object step
+0601b9d4 demo_TickTimers decrements demo timers, D E M O
+0601cf5a sfx_LoadTempBank load temp SFX
+0601cfe2 sfx_LoadPermBank load perm SFX (PERMSFX.BIN)
+0601d066 sfx_LoadSoundDriver loads SND_DRV.BIN
+06020140 options_RunVolumeMenu SFX VOLUME / CDDA VOLUME menu
+06020346 hud_DrawAutoMapperInventory Auto Mapper and weapon list
+06020ac4 hud_ClearSpriteTable zeroes sprite entries
+06020af4 hud_RunScreenSetup large screen setup sequence
+06022cc0 backup_FindOrCreateFile ALIENTRILGY file open
+06022dd8 backup_OpenFile ALIENTRILGY file lookup
+06022eec backup_ReadHeader reads ALIENTRILGY header
+060230fc smpc_InitClockDefaults writes SMPC defaults when not initialised
+06023a54 mth_GbrSaveRegs copies 8 words gbr+0 to gbr+0x20
+06023a78 mth_GbrLoadRegs copies 8 words gbr+0x20 back
+06023b06 mth_MacBlockProcess gbr-based multiply-accumulate block
+06023c5e mth_MacSaturate16 mac.w style saturating multiply
+06023ea6 smpc_SendStringCommand sends bytes with SMPC handshake
+06023f70 smpc_IssueCommand1A SMPC command 0x1a with wait
+06023fec smpc_IssueCommand1ABis SMPC command 0x1a with wait
+06024094 smpc_ReadBlockChecked reads block and bounds checks size
+06024674 vdp1_SubmitCommandCounter submit and increment counter
+06024a50 vdp1_SetCommandSlot writes command slot fields
+06024a80 vdp1_AppendCommand appends 0x20-byte command
+06024b30 vdp1_ResetState zeroes vdp1 state vars
+06024c20 cpk_OpenPlogo opens cpk streams
+06024ce4 cpk_StartMovieById movie start via jump table (PLOGO.CPK)
+06024db8 cpk_InitCinepakPlayer CINEPAK init error
+06025130 cpk_AllocSoundBuffer scsp ram alloc
+06025330 sys_SetSrInterruptMask builds sr with interrupt level
+0602524e cpk_UpdatePlayback cpk4/cpk5 playback
+060253c6 cd_InitSystem Can't init CD system
+060254f2 cd_FindFileEntry searches dir table
+06025636 cd_LoadFile loading %s
+06025744 cd_LoadFileHigh loading HIGH %s
+06025814 cd_LoadFileHighAlt loading HIGH %s variant
+0602598a cd_LoadFileForVdp2 loading for panvdp2
+06025a54 unpack_Implode pre implode size check
+06025bfa heap_MoveBlockHigh no more space
+06025e48 heap_FindFreeBlock next=this error
+06026658 bup_OpenDevice bu00 backup RAM
+0602679c gal_AllocBytes Out of Gregs memory
+0602693a gal_ReportAllocError GAL allocation error
+06026a7a gal_AllocOrFail error allocating
+06026acc gal_UnlockOrFail error unlocking
+06026f2c gal_PushHandle to many fe handles
+060270a2 gal_MoveHighBlock move hi
+060277ae sys_StubReturnVoidA empty function
+060277e8 sys_StubReturnVoidB empty function
+06027930 vdp1_ResetRegisters
+06027994 vdp1_SetEraseColorFromTable
+060279e4 vdp1_SetFrameMode
+06027a18 vdp1_SetSystemClip
+060286fe fx_KillEffect fx killed
+06028836 pal_FindClutMatch
+06028b90 pal_FindRepeat16Clut found repeat 16clut
+06028c42 pal_ReportDQClut16 DQclut16
+06028d06 pal_AllocClutColours exceeded Saturn colour ram
+06029d64 vdp2_SetupScrollRegisters
+0602a834 snd_SetMasterVolume scsp volume regs
+0602b2a8 snd_SendDriverCommand smpc and scsp handshake
+0602cdd0 vram_RelinkSlotOffset
+0602cff2 vram_AllocSlotReport space for slot report
+0602d1c8 vram_ReportSubdivFree free for subdiv
+0602d29a vram_UseSlot using slot size
+06030c5c mesh_ReportCoordsExceeded scoords exceded
+06030d80 debug_PrintJjj jjj debug print
+060312c2 anim_LoadQueenDisplayList queen DL
+06031578 spr_AllocSpbuf spbuf1/spbuf2
+0603b590 cdc_ReturnConstant
+0603b59c cdc_ReadStatusReg
+0603b5a8 cdc_WriteHirqMask
+0603b5d4 cdc_WriteReg
+0603b634 cdc_GetStatus
+0603b6c8 cdc_ExecCommand
+0603b78c cdc_FindHirqBit
+0603b7b8 cdc_WriteResponseRegs
+0603b7f0 cdc_ReadResponseRegs
+0603b82c cdc_CopyGlobalPair
+0603be88 scu_WriteDmaDescriptor
+0603bf04 scu_SelectDmaMode
+0603c6e8 gfs_RequestRead
+0603d180 gfs_SetCallbackArg
+06043068 cpk_SetStateAndNotify
+06043100 cpk_ReportInitialised CPK system is initialized
+0604318c cpk_ReportNotRunning CPK system is not running
+060431f4 cpk_ReportInitialisedB CPK system is initialized
+0604326e cpk_StartSystem CPK system is initialized
+06043b7e cpk_ParseFilmHeader FILM chunk
+06047d4c rtl_Memcpy byte copy loop returns dst
+0604a90c rtl_SignedDivide software divide
+0604b480 rtl_UnsignedDivide bitwise divide step unrolled
+0604b530 rtl_Nop empty function
+0604b564 rtl_NopB empty function
+0604b56a rtl_NopC empty function
+06048c56 sys_HeapStackCollision Heap and stack collision
+06048f18 sys_CallVbrVector0C calls vector at vbr+0xc
