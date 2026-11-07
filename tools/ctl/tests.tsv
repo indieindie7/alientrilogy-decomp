@@ -1,0 +1,54 @@
+hud_Run_21b0c	HUD (health, ammo, radar) missing or frozen
+hud_Run_228d8	one or more HUD elements missing/frozen
+hud_ForEach_226e8	a HUD element (bar/number) missing
+hud_ForEach_223f8	a HUD element missing
+hud_ForEach_225b0	a HUD element missing
+hud_ForEach_2239c	a HUD element missing
+hud_ForEach_22af4	a HUD element missing
+hud_Tick_208fc	HUD element frozen or missing
+hud_Tick_20990	HUD element frozen or missing
+hud_ForEach_20a10	HUD element missing
+hud_Tick_22ad0	HUD element frozen
+hud_DrawAutoMapperInventory	no change in gameplay (only drawn in map/inventory screen)
+hud_ClearSpriteTable	stale HUD sprites / artifacts, otherwise running
+vdp1_AppendCommand	VDP1 commands not appended: screen sprites/polys vanish or garbage
+vdp1_SetCommandSlot	VDP1 command slots not written: draw corruption
+vdp1_SubmitCommandCounter	command counter not incremented: draw loss
+gfx_AllocCommandBlock	command block not advanced: overwriting, draw corruption
+sprite_QueueEntry	sprites (gun, HUD, enemies) not queued: vanish
+vdp1_ResetState	init only: no visible change
+vdp1_SetSystemClip	clip not set per frame: clip stays, likely no change or clipped view
+vdp1_SetFrameMode	frame mode not set: likely no change (init) or flicker
+vdp1_SetEraseColorFromTable	erase colour not updated: no change if constant
+vdp2_SetupScrollRegisters	init only: no change
+gfx_Step_0cec0	10 callers, graphics helper: some drawing missing
+map_GetTileActionAt	tile action lookup: doors/pickups/collisions change; walking through walls or no door
+mesh_BuildVertexLists	level geometry build: if per-frame, world breaks; if load-time no change
+mesh_UploadVertices	vertex upload: if per-frame, world breaks; else no change
+mesh_MathCalc_0dee0	9 callers math: world geometry glitch
+mesh_Run_1e1cc	23 callees: render driver, world not drawn
+mesh_Run_1fa68	render step: partial draw missing
+enemy_Run_10fac	enemy run: no change with no enemy in view
+enemy_Run_12a80	enemy run: no change with no enemy in view
+enemy_Run_12e56	enemy run: no change with no enemy in view
+enemy_ForEach_1361e	enemy loop: no change with no enemy in view
+obj_Run_1823c	object run loop: objects (doors/items) stop updating
+obj_Run_1b3f4	object run: objects stop updating
+obj_Run_19ed4	object run: objects stop updating
+rtl_Memcpy	byte copy used everywhere: corruption or hang
+rtl_SignedDivide	software divide: projection broken or game halts
+rtl_UnsignedDivide	software divide: projection broken or game halts
+mth_MacBlockProcess	math block: geometry glitch
+heap_FindFreeBlock	allocator: no change in steady state
+rtl_Nop	already empty: no change (control)
+sys_StubReturnVoidA	already empty: no change (control)
+sys_StubReturnVoidB	already empty: no change (control)
+cd_LoadFile	no CD loading in gameplay: no change (control)
+sfx_LoadTempBank	no load in gameplay: no change (control)
+backup_LoadSlotFromCard	no change (control)
+password_CheckEntered	no change (control)
+demo_TickTimers	no demo timers in gameplay: no change (control)
+hazard_SteamValveStep	no steam in view: no change
+snd_SendDriverCommand	silent (sound off): no visible change; sound command ring unchanged
+snd_SetMasterVolume	no visible change
+cpk_UpdatePlayback	no movie: no change (control)

@@ -32,7 +32,7 @@
 0x0600724c func sys_ForEach_0724c hand provisional structural name: ForEach near sys code, 230 bytes, 1 callees, 1 callers
 0x06007350 func password_InitVars_07350 hand provisional structural name: InitVars near password code, 44 bytes, 0 callees, 3 callers
 0x06007438 func password_DecodeString hand provisional xor 0x1f decode of stored password text
-0x06007466 func password_CheckEntered hand provisional checks entered password (FLYT0) and sets flags
+0x06007466 func password_CheckEntered hand provisional checks entered password (FLYT0) and sets flags (verified ctl 11-06)
 0x06007572 func password_BuildDisplayString hand provisional builds password string from value
 0x060077e0 func menu_DrawExitItem hand provisional draws Exit menu entry
 0x06007818 func menu_Step_07818 hand provisional structural name: Step near menu code, 30 bytes, 1 callees, 0 callers
@@ -57,7 +57,7 @@
 0x060085bc func backup_Tick_085bc hand provisional structural name: Tick near backup code, 48 bytes, 2 callees, 0 callers
 0x06008650 func backup_Access_08650 hand provisional structural name: Access near backup code, 20 bytes, 0 callees, 1 callers
 0x06008668 func backup_Step_08668 hand provisional structural name: Step near backup code, 52 bytes, 2 callees, 2 callers
-0x060086c8 func backup_LoadSlotFromCard hand provisional loads save slot from backup RAM/card
+0x060086c8 func backup_LoadSlotFromCard hand provisional loads save slot from backup RAM/card (verified ctl 11-06)
 0x06008762 func backup_GetSlotLabel hand provisional copies slot label or Unused
 0x06008808 func backup_Wrapper_08808 hand provisional structural name: Wrapper near backup code, 20 bytes, 1 callees, 0 callers
 0x06008820 func backup_Wrapper_08820 hand provisional structural name: Wrapper near backup code, 20 bytes, 1 callees, 0 callers
@@ -108,12 +108,12 @@
 0x0600c310 func model_LoadBox2SatData hand provisional parses box2sat processed model data
 0x0600c7e8 func model_ForEach_0c7e8 hand provisional structural name: ForEach near model code, 58 bytes, 1 callees, 1 callers
 0x0600c8f8 func sprite_Tick_0c8f8 hand provisional structural name: Tick near sprite code, 54 bytes, 3 callees, 1 callers
-0x0600c96e func sprite_QueueEntry hand provisional queues sprite, TOO MANY SPRITES check
+0x0600c96e func sprite_QueueEntry hand provisional queues sprite, TOO MANY SPRITES check (refuted ctl 11-06 (stub no effect))
 0x0600c9d8 func sprite_Step_0c9d8 hand provisional structural name: Step near sprite code, 70 bytes, 2 callees, 1 callers
 0x0600ca28 func sprite_ForEach_0ca28 hand provisional structural name: ForEach near sprite code, 306 bytes, 11 callees, 1 callers
 0x0600cb8c func gfx_LoopCalc_0cb8c hand provisional structural name: LoopCalc near gfx code, 78 bytes, 0 callees, 1 callers
 0x0600cc10 func gfx_ResetTableAndRebuild hand provisional init identity table then rebuild
-0x0600cec0 func gfx_Step_0cec0 hand provisional structural name: Step near gfx code, 74 bytes, 2 callees, 10 callers
+0x0600cec0 func gfx_Step_0cec0 hand provisional verified ctl 11-06
 0x0600cf18 func gfx_Step_0cf18 hand provisional structural name: Step near gfx code, 96 bytes, 2 callees, 4 callers
 0x0600cf84 func gfx_Tick_0cf84 hand provisional structural name: Tick near gfx code, 114 bytes, 7 callees, 0 callers
 0x0600d02c func gfx_Step_0d02c hand provisional structural name: Step near gfx code, 224 bytes, 3 callees, 2 callers
@@ -126,15 +126,15 @@
 0x0600d6b4 func gfx_LoopCalc_0d6b4 hand provisional structural name: LoopCalc near gfx code, 110 bytes, 0 callees, 1 callers
 0x0600d724 func gfx_ForEach_0d724 hand provisional structural name: ForEach near gfx code, 336 bytes, 2 callees, 1 callers
 0x0600d8a0 func mesh_LoopCalc_0d8a0 hand provisional structural name: LoopCalc near mesh code, 36 bytes, 0 callees, 1 callers
-0x0600d96e func mesh_BuildVertexLists hand provisional builds vertex lists ("vertice start")
-0x0600dd44 func map_GetTileActionAt hand provisional tile lookup by x>>9,y>>9 then jump-table dispatch
-0x0600dee0 func mesh_MathCalc_0dee0 hand provisional structural name: MathCalc near mesh code, 96 bytes, 0 callees, 9 callers
+0x0600d96e func mesh_BuildVertexLists hand provisional builds vertex lists ("vertice start") (verified ctl 11-06)
+0x0600dd44 func map_LookupTileCell hand provisional tile lookup by x>>9,y>>9 then jump-table dispatch (renamed from map_GetTileActionAt, ctl 11-06: world view black (HUD and fire still work))
+0x0600dee0 func mesh_MathCalc_0dee0 hand provisional inconclusive ctl 11-06
 0x0600df48 func mesh_MathCalc_0df48 hand provisional structural name: MathCalc near mesh code, 72 bytes, 0 callees, 1 callers
 0x0600dff4 func mesh_MathCalc_0dff4 hand provisional structural name: MathCalc near mesh code, 72 bytes, 0 callees, 1 callers
 0x0600e0a0 func mesh_LoopCalc_0e0a0 hand provisional structural name: LoopCalc near mesh code, 46 bytes, 0 callees, 1 callers
 0x0600e0d8 func mesh_FillLoop_0e0d8 hand provisional structural name: FillLoop near mesh code, 268 bytes, 0 callees, 1 callers
 0x0600e1f0 func mesh_LoopCalc_0e1f0 hand provisional structural name: LoopCalc near mesh code, 156 bytes, 0 callees, 0 callers
-0x0600e31c func mesh_UploadVertices hand provisional uploads vertices ("vindex")
+0x0600e31c func mesh_UploadVertices hand provisional uploads vertices ("vindex") (verified ctl 11-06)
 0x0600e770 func mesh_Access_0e770 hand provisional structural name: Access near mesh code, 10 bytes, 0 callees, 1 callers
 0x0600e794 func mesh_CheckVertexMatch hand provisional compares vertex, prints failedx/failedy
 0x0600e824 func mesh_LoopCalc_0e824 hand provisional structural name: LoopCalc near mesh code, 236 bytes, 0 callees, 1 callers
@@ -160,35 +160,35 @@
 0x06010de6 func enemy_DecodeAndSpawnCheck hand provisional decode table then spawn warnings
 0x06010f28 func enemy_Tick_10f28 hand provisional structural name: Tick near enemy code, 28 bytes, 2 callees, 0 callers
 0x06010f50 func enemy_ObjProc_10f50 hand provisional structural name: ObjProc near enemy code, 86 bytes, 1 callees, 3 callers
-0x06010fac func enemy_Run_10fac hand provisional structural name: Run near enemy code, 960 bytes, 14 callees, 1 callers
+0x06010fac func enemy_Run_10fac hand provisional inconclusive ctl 11-06
 0x060113c8 func enemy_Proc_113c8 hand provisional structural name: Proc near enemy code, 444 bytes, 7 callees, 1 callers
 0x060115a4 func enemy_ForEach_115a4 hand provisional structural name: ForEach near enemy code, 196 bytes, 1 callees, 0 callers
 0x06011678 func enemy_LoopCalc_11678 hand provisional structural name: LoopCalc near enemy code, 156 bytes, 0 callees, 0 callers
 0x06011720 func enemy_Step_11720 hand provisional structural name: Step near enemy code, 196 bytes, 1 callees, 0 callers
 0x060117ec func enemy_ObjProc_117ec hand provisional structural name: ObjProc near enemy code, 78 bytes, 2 callees, 0 callers
 0x06011a64 func enemy_Step_11a64 hand provisional structural name: Step near enemy code, 144 bytes, 1 callees, 0 callers
-0x06011d20 func gfx_AllocCommandBlock hand provisional advances command pointer 0x10
+0x06011d20 func gfx_AllocCommandBlock hand provisional advances command pointer 0x10 (refuted ctl 11-06 (stub no effect))
 0x06011df8 func gfx_Proc_11df8 hand provisional structural name: Proc near gfx code, 272 bytes, 6 callees, 0 callers
 0x060120f4 func enemy_ObjProc_120f4 hand provisional structural name: ObjProc near enemy code, 230 bytes, 1 callees, 1 callers
 0x0601251c func enemy_SetupObj_1251c hand provisional structural name: SetupObj near enemy code, 98 bytes, 0 callees, 1 callers
 0x0601283c func enemy_ObjProc_1283c hand provisional structural name: ObjProc near enemy code, 124 bytes, 2 callees, 1 callers
 0x060128f0 func enemy_ObjProc_128f0 hand provisional structural name: ObjProc near enemy code, 102 bytes, 2 callees, 0 callers
 0x06012a3c func enemy_Access_12a3c hand provisional structural name: Access near enemy code, 62 bytes, 0 callees, 1 callers
-0x06012a80 func enemy_Run_12a80 hand provisional structural name: Run near enemy code, 854 bytes, 11 callees, 1 callers
+0x06012a80 func enemy_Run_12a80 hand provisional inconclusive ctl 11-06
 0x06012e08 func enemy_Access_12e08 hand provisional structural name: Access near enemy code, 72 bytes, 0 callees, 1 callers
-0x06012e56 func enemy_Run_12e56 hand provisional structural name: Run near enemy code, 848 bytes, 11 callees, 1 callers
+0x06012e56 func enemy_Run_12e56 hand provisional inconclusive ctl 11-06
 0x060131d8 func enemy_ObjProc_131d8 hand provisional structural name: ObjProc near enemy code, 448 bytes, 5 callees, 0 callers
 0x060133b0 func enemy_Step_133b0 hand provisional structural name: Step near enemy code, 76 bytes, 1 callees, 2 callers
 0x06013404 func enemy_ObjProc_13404 hand provisional structural name: ObjProc near enemy code, 206 bytes, 1 callees, 1 callers
 0x060134e8 func enemy_ObjProc_134e8 hand provisional structural name: ObjProc near enemy code, 214 bytes, 1 callees, 0 callers
-0x0601361e func enemy_ForEach_1361e hand provisional structural name: ForEach near enemy code, 1210 bytes, 13 callees, 0 callers
+0x0601361e func enemy_ForEach_1361e hand provisional inconclusive ctl 11-06
 0x06013f00 func enemy_SetupObj_13f00 hand provisional structural name: SetupObj near enemy code, 40 bytes, 0 callees, 0 callers
 0x06013f28 func enemy_ObjProc_13f28 hand provisional structural name: ObjProc near enemy code, 88 bytes, 3 callees, 2 callers
 0x0601411c func enemy_SetupObj_1411c hand provisional structural name: SetupObj near enemy code, 328 bytes, 0 callees, 0 callers
 0x06014270 func enemy_SetupObj_14270 hand provisional structural name: SetupObj near enemy code, 328 bytes, 0 callees, 0 callers
 0x060143c4 func enemy_SetupObj_143c4 hand provisional structural name: SetupObj near enemy code, 132 bytes, 0 callees, 0 callers
 0x06015e20 func obj_Step_15e20 hand provisional structural name: Step near obj code, 200 bytes, 3 callees, 0 callers
-0x06016208 func hazard_SteamValveStep hand provisional steam valve / flame jet object step
+0x06016208 func hazard_SteamValveStep hand provisional steam valve / flame jet object step (inconclusive ctl 11-06)
 0x06016444 func hazard_ObjProc_16444 hand provisional structural name: ObjProc near hazard code, 52 bytes, 2 callees, 0 callers
 0x06016f64 func hazard_LoopCalc_16f64 hand provisional structural name: LoopCalc near hazard code, 34 bytes, 0 callees, 1 callers
 0x06016f90 func hazard_Get_16f90 hand provisional structural name: Get near hazard code, 10 bytes, 0 callees, 0 callers
@@ -210,7 +210,7 @@
 0x06017df4 func obj_Tick_17df4 hand provisional structural name: Tick near obj code, 138 bytes, 2 callees, 1 callers
 0x06017e9c func obj_ForEach_17e9c hand provisional structural name: ForEach near obj code, 234 bytes, 3 callees, 1 callers
 0x06017fb0 func obj_Run_17fb0 hand provisional structural name: Run near obj code, 580 bytes, 10 callees, 1 callers
-0x0601823c func obj_Run_1823c hand provisional structural name: Run near obj code, 490 bytes, 13 callees, 1 callers
+0x0601823c func hud_DrawAmmoBarByMode_1823c hand provisional renamed from obj_Run_1823c, ctl 11-06: ammo bar fill vanishes, number stays
 0x060184d0 func obj_Stub_184d0 hand provisional structural name: Stub near obj code, 4 bytes, 0 callees, 1 callers
 0x060184d4 func obj_Step_184d4 hand provisional structural name: Step near obj code, 174 bytes, 3 callees, 3 callers
 0x060185f8 func obj_ForEach_185f8 hand provisional structural name: ForEach near obj code, 358 bytes, 4 callees, 1 callers
@@ -230,7 +230,7 @@
 0x06019a9c func obj_SetupObj_19a9c hand provisional structural name: SetupObj near obj code, 30 bytes, 0 callees, 0 callers
 0x06019ac0 func obj_ObjProc_19ac0 hand provisional structural name: ObjProc near obj code, 858 bytes, 6 callees, 0 callers
 0x06019e5c func obj_SetupObj_19e5c hand provisional structural name: SetupObj near obj code, 112 bytes, 0 callees, 0 callers
-0x06019ed4 func obj_Run_19ed4 hand provisional structural name: Run near obj code, 320 bytes, 13 callees, 0 callers
+0x06019ed4 func obj_Run_19ed4 hand provisional refuted ctl 11-06 (stub no effect)
 0x0601a318 func obj_Set_1a318 hand provisional structural name: Set near obj code, 12 bytes, 0 callees, 1 callers
 0x0601a334 func obj_Step_1a334 hand provisional structural name: Step near obj code, 56 bytes, 1 callees, 2 callers
 0x0601a374 func obj_Step_1a374 hand provisional structural name: Step near obj code, 80 bytes, 2 callees, 1 callers
@@ -250,13 +250,13 @@
 0x0601ac60 func obj_Run_1ac60 hand provisional structural name: Run near obj code, 832 bytes, 11 callees, 1 callers
 0x0601aff0 func obj_MathCalc_1aff0 hand provisional structural name: MathCalc near obj code, 98 bytes, 0 callees, 1 callers
 0x0601b05c func obj_Run_1b05c hand provisional structural name: Run near obj code, 842 bytes, 11 callees, 1 callers
-0x0601b3f4 func obj_Run_1b3f4 hand provisional structural name: Run near obj code, 864 bytes, 15 callees, 0 callers
+0x0601b3f4 func obj_Run_1b3f4 hand provisional refuted ctl 11-06 (stub no effect)
 0x0601b834 func obj_Step_1b834 hand provisional structural name: Step near obj code, 110 bytes, 2 callees, 1 callers
-0x0601b8bc func demo_Step_1b8bc hand provisional structural name: Step near demo code, 154 bytes, 2 callees, 2 callers
-0x0601b974 func demo_Wrapper_1b974 hand provisional structural name: Wrapper near demo code, 16 bytes, 1 callees, 2 callers
-0x0601b988 func demo_Step_1b988 hand provisional structural name: Step near demo code, 58 bytes, 1 callees, 0 callers
-0x0601b9d4 func demo_TickTimers hand provisional decrements demo timers, D E M O
-0x0601badc func demo_Tick_1badc hand provisional structural name: Tick near demo code, 232 bytes, 5 callees, 1 callers
+0x0601b8bc func game_Step_1b8bc hand provisional structural name: Step near game code, 154 bytes, 2 callees, 2 callers
+0x0601b974 func game_Wrapper_1b974 hand provisional structural name: Wrapper near game code, 16 bytes, 1 callees, 2 callers
+0x0601b988 func game_Step_1b988 hand provisional structural name: Step near game code, 58 bytes, 1 callees, 0 callers
+0x0601b9d4 func game_TickFrameTimers hand provisional decrements demo timers, D E M O (renamed from demo_TickTimers, ctl 11-06: health and ammo bars stop drawing)
+0x0601badc func game_Tick_1badc hand provisional structural name: Tick near game code, 232 bytes, 5 callees, 1 callers
 0x0601bf34 func demo_Proc_1bf34 hand provisional structural name: Proc near demo code, 76 bytes, 5 callees, 0 callers
 0x0601bfa4 func demo_Run_1bfa4 hand provisional structural name: Run near demo code, 1158 bytes, 25 callees, 0 callers
 0x0601c9cc func demo_Tick_1c9cc hand provisional structural name: Tick near demo code, 90 bytes, 1 callees, 3 callers
@@ -264,7 +264,7 @@
 0x0601cb08 func demo_InitVars_1cb08 hand provisional structural name: InitVars near demo code, 20 bytes, 0 callees, 0 callers
 0x0601cef4 func sfx_LoopCalc_1cef4 hand provisional structural name: LoopCalc near sfx code, 72 bytes, 0 callees, 0 callers
 0x0601cf44 func sfx_Stub_1cf44 hand provisional structural name: Stub near sfx code, 4 bytes, 0 callees, 1 callers
-0x0601cf5a func sfx_LoadTempBank hand provisional load temp SFX
+0x0601cf5a func sfx_LoadTempBank hand provisional load temp SFX (verified ctl 11-06)
 0x0601cfe2 func sfx_LoadPermBank hand provisional load perm SFX (PERMSFX.BIN)
 0x0601d03c func sfx_Stub_1d03c hand provisional structural name: Stub near sfx code, 4 bytes, 0 callees, 1 callers
 0x0601d040 func sfx_Set_1d040 hand provisional structural name: Set near sfx code, 12 bytes, 0 callees, 2 callers
@@ -287,7 +287,7 @@
 0x0601e074 func mesh_ForEach_1e074 hand provisional structural name: ForEach near mesh code, 144 bytes, 4 callees, 1 callers
 0x0601e13c func mesh_LoopCalc_1e13c hand provisional structural name: LoopCalc near mesh code, 100 bytes, 0 callees, 1 callers
 0x0601e1ac func mesh_Thunk_1e1ac hand provisional structural name: Thunk near mesh code, 22 bytes, 1 callees, 1 callers
-0x0601e1cc func mesh_Run_1e1cc hand provisional structural name: Run near mesh code, 578 bytes, 23 callees, 0 callers
+0x0601e1cc func mesh_Run_1e1cc hand provisional refuted ctl 11-06 (stub no effect)
 0x0601e564 func mesh_LoopCalc_1e564 hand provisional structural name: LoopCalc near mesh code, 100 bytes, 0 callees, 1 callers
 0x0601e8b8 func mesh_LoopCalc_1e8b8 hand provisional structural name: LoopCalc near mesh code, 302 bytes, 0 callees, 1 callers
 0x0601e9ec func mesh_ForEach_1e9ec hand provisional structural name: ForEach near mesh code, 442 bytes, 3 callees, 1 callers
@@ -307,30 +307,30 @@
 0x0601f780 func mesh_ForEach_1f780 hand provisional structural name: ForEach near mesh code, 176 bytes, 2 callees, 1 callers
 0x0601f8a8 func mesh_Step_1f8a8 hand provisional structural name: Step near mesh code, 114 bytes, 3 callees, 2 callers
 0x0601f930 func mesh_Tick_1f930 hand provisional structural name: Tick near mesh code, 248 bytes, 5 callees, 1 callers
-0x0601fa68 func mesh_Run_1fa68 hand provisional structural name: Run near mesh code, 560 bytes, 11 callees, 1 callers
+0x0601fa68 func mesh_Run_1fa68 hand provisional refuted ctl 11-06 (stub no effect)
 0x0601fd32 func mesh_Step_1fd32 hand provisional structural name: Step near mesh code, 102 bytes, 1 callees, 1 callers
 0x06020140 func options_RunVolumeMenu hand provisional SFX VOLUME / CDDA VOLUME menu
-0x06020346 func hud_DrawAutoMapperInventory hand provisional Auto Mapper and weapon list
+0x06020346 func hud_DrawAutoMapperInventory hand provisional Auto Mapper and weapon list (verified ctl 11-06)
 0x0602074c func hud_Access_2074c hand provisional structural name: Access near hud code, 48 bytes, 0 callees, 1 callers
-0x060208fc func hud_Tick_208fc hand provisional structural name: Tick near hud code, 120 bytes, 2 callees, 1 callers
-0x06020990 func hud_Tick_20990 hand provisional structural name: Tick near hud code, 98 bytes, 2 callees, 1 callers
-0x06020a10 func hud_ForEach_20a10 hand provisional structural name: ForEach near hud code, 120 bytes, 6 callees, 3 callers
-0x06020ac4 func hud_ClearSpriteTable hand provisional zeroes sprite entries
+0x060208fc func hud_Tick_208fc hand provisional refuted ctl 11-06 (stub no effect)
+0x06020990 func hud_Tick_20990 hand provisional refuted ctl 11-06 (stub no effect)
+0x06020a10 func hud_ForEach_20a10 hand provisional refuted ctl 11-06 (stub no effect)
+0x06020ac4 func hud_ClearSpriteTable hand provisional zeroes sprite entries (refuted ctl 11-06 (stub no effect))
 0x06020af4 func hud_RunScreenSetup hand provisional large screen setup sequence
 0x06020f00 func hud_LoopCalc_20f00 hand provisional structural name: LoopCalc near hud code, 66 bytes, 0 callees, 0 callers
 0x06020f4c func hud_LoopCalc_20f4c hand provisional structural name: LoopCalc near hud code, 56 bytes, 0 callees, 1 callers
 0x06020f90 func hud_Access_20f90 hand provisional structural name: Access near hud code, 18 bytes, 0 callees, 0 callers
 0x060215d0 func hud_Access_215d0 hand provisional structural name: Access near hud code, 72 bytes, 0 callees, 1 callers
-0x06021b0c func hud_Run_21b0c hand provisional structural name: Run near hud code, 2036 bytes, 52 callees, 1 callers
-0x0602239c func hud_ForEach_2239c hand provisional structural name: ForEach near hud code, 72 bytes, 1 callees, 0 callers
-0x060223f8 func hud_ForEach_223f8 hand provisional structural name: ForEach near hud code, 270 bytes, 3 callees, 1 callers
-0x060225b0 func hud_ForEach_225b0 hand provisional structural name: ForEach near hud code, 132 bytes, 1 callees, 1 callers
-0x060226e8 func hud_ForEach_226e8 hand provisional structural name: ForEach near hud code, 424 bytes, 4 callees, 2 callers
-0x060228d8 func hud_Run_228d8 hand provisional structural name: Run near hud code, 404 bytes, 10 callees, 3 callers
+0x06021b0c func hud_Run_21b0c hand provisional refuted ctl 11-06 (stub no effect)
+0x0602239c func hud_ForEach_2239c hand provisional refuted ctl 11-06 (stub no effect)
+0x060223f8 func hud_ForEach_223f8 hand provisional refuted ctl 11-06 (stub no effect)
+0x060225b0 func hud_ForEach_225b0 hand provisional refuted ctl 11-06 (stub no effect)
+0x060226e8 func hud_ForEach_226e8 hand provisional refuted ctl 11-06 (stub no effect)
+0x060228d8 func hud_Run_228d8 hand provisional refuted ctl 11-06 (stub no effect)
 0x06022ab4 func hud_Wrapper_22ab4 hand provisional structural name: Wrapper near hud code, 18 bytes, 1 callees, 0 callers
-0x06022ad0 func hud_Tick_22ad0 hand provisional structural name: Tick near hud code, 22 bytes, 2 callees, 0 callers
-0x06022af4 func hud_ForEach_22af4 hand provisional structural name: ForEach near hud code, 154 bytes, 3 callees, 0 callers
-0x06022ba4 func backup_ForEach_22ba4 hand provisional structural name: ForEach near backup code, 152 bytes, 1 callees, 1 callers
+0x06022ad0 func hud_Tick_22ad0 hand provisional refuted ctl 11-06 (stub no effect)
+0x06022af4 func hud_ForEach_22af4 hand provisional refuted ctl 11-06 (stub no effect)
+0x06022ba4 func hud_ForEach_22ba4 hand provisional structural name: ForEach near hud code, 152 bytes, 1 callees, 1 callers
 0x06022c48 func backup_ForEach_22c48 hand provisional structural name: ForEach near backup code, 100 bytes, 1 callees, 1 callers
 0x06022cc0 func backup_FindOrCreateFile hand provisional ALIENTRILGY file open
 0x06022dd8 func backup_OpenFile hand provisional ALIENTRILGY file lookup
@@ -354,7 +354,7 @@
 0x06023a54 func mth_GbrSaveRegs hand provisional copies 8 words gbr+0 to gbr+0x20
 0x06023a78 func mth_GbrLoadRegs hand provisional copies 8 words gbr+0x20 back
 0x06023a9c func mth_GbrRegs_23a9c hand provisional structural name: GbrRegs near mth code, 36 bytes, 0 callees, 1 callers
-0x06023b06 func mth_MacBlockProcess hand provisional gbr-based multiply-accumulate block
+0x06023b06 func mth_MacBlockProcess hand provisional gbr-based multiply-accumulate block (verified ctl 11-06)
 0x06023c5e func mth_MacSaturate16 hand provisional mac.w style saturating multiply
 0x06023c9c func mth_SysAsm_23c9c hand provisional structural name: SysAsm near mth code, 268 bytes, 0 callees, 7 callers
 0x06023da8 func smpc_MathCalc_23da8 hand provisional structural name: MathCalc near smpc code, 144 bytes, 0 callees, 4 callers
@@ -382,7 +382,7 @@
 0x0602459c func vdp1_Stub_2459c hand provisional structural name: Stub near vdp1 code, 4 bytes, 0 callees, 1 callers
 0x06024618 func vdp1_Tick_24618 hand provisional structural name: Tick near vdp1 code, 42 bytes, 2 callees, 0 callers
 0x06024664 func vdp1_Get_24664 hand provisional structural name: Get near vdp1 code, 10 bytes, 0 callees, 1 callers
-0x06024674 func vdp1_SubmitCommandCounter hand provisional submit and increment counter
+0x06024674 func sys_CallAndIncTickCounter hand provisional submit and increment counter (renamed from vdp1_SubmitCommandCounter, ctl 11-06: view stops moving after arrow keys, radar sweep stops, fire still decrements ammo)
 0x060246dc func vdp1_ForEach_246dc hand provisional structural name: ForEach near vdp1 code, 62 bytes, 1 callees, 0 callers
 0x06024720 func vdp1_ForEach_24720 hand provisional structural name: ForEach near vdp1 code, 140 bytes, 4 callees, 1 callers
 0x060247d0 func vdp1_Get_247d0 hand provisional structural name: Get near vdp1 code, 18 bytes, 0 callees, 0 callers
@@ -397,22 +397,22 @@
 0x060249c0 func vdp1_ForEach_249c0 hand provisional structural name: ForEach near vdp1 code, 40 bytes, 2 callees, 1 callers
 0x060249f0 func vdp1_Thunk_249f0 hand provisional structural name: Thunk near vdp1 code, 14 bytes, 1 callees, 0 callers
 0x06024a40 func vdp1_Get_24a40 hand provisional structural name: Get near vdp1 code, 10 bytes, 0 callees, 0 callers
-0x06024a50 func vdp1_SetCommandSlot hand provisional writes command slot fields
-0x06024a80 func vdp1_AppendCommand hand provisional appends 0x20-byte command
-0x06024b30 func vdp1_ResetState hand provisional zeroes vdp1 state vars
+0x06024a50 func vdp1_SetCommandSlot hand provisional writes command slot fields (refuted ctl 11-06 (stub no effect))
+0x06024a80 func vdp1_AppendCommand hand provisional appends 0x20-byte command (refuted ctl 11-06 (stub no effect))
+0x06024b30 func vdp1_ResetState hand provisional zeroes vdp1 state vars (verified ctl 11-06)
 0x06024c20 func cpk_OpenPlogo hand provisional opens cpk streams
 0x06024cb4 func cpk_ForEach_24cb4 hand provisional structural name: ForEach near cpk code, 40 bytes, 1 callees, 1 callers
 0x06024ce4 func cpk_StartMovieById hand provisional movie start via jump table (PLOGO.CPK)
 0x06024db8 func cpk_InitCinepakPlayer hand provisional CINEPAK init error
 0x06025130 func cpk_AllocSoundBuffer hand provisional scsp ram alloc
-0x0602524e func cpk_UpdatePlayback hand provisional cpk4/cpk5 playback
+0x0602524e func cpk_UpdatePlayback hand provisional cpk4/cpk5 playback (verified ctl 11-06)
 0x06025330 func sys_SetSrInterruptMask hand provisional builds sr with interrupt level
 0x0602538c func cd_Thunk_2538c hand provisional structural name: Thunk near cd code, 18 bytes, 1 callees, 1 callers
 0x060253c6 func cd_InitSystem hand provisional Can't init CD system
 0x06025470 func cd_FillLoop_25470 hand provisional structural name: FillLoop near cd code, 56 bytes, 0 callees, 2 callers
 0x060254b0 func cd_LoopCalc_254b0 hand provisional structural name: LoopCalc near cd code, 52 bytes, 0 callees, 1 callers
 0x060254f2 func cd_FindFileEntry hand provisional searches dir table
-0x06025636 func cd_LoadFile hand provisional loading %s
+0x06025636 func cd_LoadFile hand provisional loading %s (verified ctl 11-06)
 0x06025744 func cd_LoadFileHigh hand provisional loading HIGH %s
 0x06025814 func cd_LoadFileHighAlt hand provisional loading HIGH %s variant
 0x06025918 func cd_Stub_25918 hand provisional structural name: Stub near cd code, 4 bytes, 0 callees, 0 callers
@@ -431,7 +431,7 @@
 0x06025db8 func heap_Access_25db8 hand provisional structural name: Access near heap code, 36 bytes, 0 callees, 3 callers
 0x06025de4 func heap_Access_25de4 hand provisional structural name: Access near heap code, 12 bytes, 0 callees, 1 callers
 0x06025df0 func heap_Access_25df0 hand provisional structural name: Access near heap code, 12 bytes, 0 callees, 2 callers
-0x06025e48 func heap_FindFreeBlock hand provisional next=this error
+0x06025e48 func heap_FindFreeBlock hand provisional next=this error (verified ctl 11-06)
 0x06025eb4 func heap_LoopCalc_25eb4 hand provisional structural name: LoopCalc near heap code, 28 bytes, 0 callees, 4 callers
 0x06025ed4 func heap_ForEach_25ed4 hand provisional structural name: ForEach near heap code, 122 bytes, 3 callees, 2 callers
 0x06025fe8 func heap_ObjProc_25fe8 hand provisional structural name: ObjProc near heap code, 194 bytes, 6 callees, 1 callers
@@ -476,18 +476,18 @@
 0x060276b4 func vdp1_SetupObj_276b4 hand provisional structural name: SetupObj near vdp1 code, 44 bytes, 0 callees, 1 callers
 0x060276fc func vdp1_Tick_276fc hand provisional structural name: Tick near vdp1 code, 54 bytes, 1 callees, 0 callers
 0x06027740 func vdp1_Step_27740 hand provisional structural name: Step near vdp1 code, 74 bytes, 3 callees, 1 callers
-0x060277ae func sys_StubReturnVoidA hand provisional empty function
+0x060277ae func sys_StubReturnVoidA hand provisional empty function (verified ctl 11-06)
 0x060277d6 func vdp1_Get_277d6 hand provisional structural name: Get near vdp1 code, 14 bytes, 0 callees, 1 callers
 0x060277e4 func vdp1_Stub_277e4 hand provisional structural name: Stub near vdp1 code, 4 bytes, 0 callees, 1 callers
-0x060277e8 func sys_StubReturnVoidB hand provisional empty function
+0x060277e8 func sys_StubReturnVoidB hand provisional empty function (verified ctl 11-06)
 0x060277f6 func vdp1_Stub_277f6 hand provisional structural name: Stub near vdp1 code, 4 bytes, 0 callees, 1 callers
 0x060277fc func vdp1_SysAsm_277fc hand provisional structural name: SysAsm near vdp1 code, 8 bytes, 0 callees, 6 callers
 0x06027864 func vdp1_Stub_27864 hand provisional structural name: Stub near vdp1 code, 6 bytes, 0 callees, 0 callers
 0x06027930 func vdp1_ResetRegisters hand provisional named from code/strings
-0x06027994 func vdp1_SetEraseColorFromTable hand provisional named from code/strings
+0x06027994 func vdp1_SetEraseColorFromTable hand provisional verified ctl 11-06
 0x060279c0 func vdp1_FillLoop_279c0 hand provisional structural name: FillLoop near vdp1 code, 28 bytes, 0 callees, 1 callers
-0x060279e4 func vdp1_SetFrameMode hand provisional named from code/strings
-0x06027a18 func vdp1_SetSystemClip hand provisional named from code/strings
+0x060279e4 func vdp1_SetFrameMode hand provisional verified ctl 11-06
+0x06027a18 func vdp1_SetSystemClip hand provisional verified ctl 11-06
 0x06027a44 func vdp1_Stub_27a44 hand provisional structural name: Stub near vdp1 code, 4 bytes, 0 callees, 0 callers
 0x06027ab8 func vdp1_Step_27ab8 hand provisional structural name: Step near vdp1 code, 42 bytes, 1 callees, 0 callers
 0x06027b10 func vdp1_LoopCalc_27b10 hand provisional structural name: LoopCalc near vdp1 code, 28 bytes, 0 callees, 5 callers
@@ -531,7 +531,7 @@
 0x06029240 func pal_Step_29240 hand provisional structural name: Step near pal code, 36 bytes, 2 callees, 0 callers
 0x06029274 func pal_ForEach_29274 hand provisional structural name: ForEach near pal code, 98 bytes, 3 callees, 2 callers
 0x06029644 func pal_ForEach_29644 hand provisional structural name: ForEach near pal code, 702 bytes, 5 callees, 0 callers
-0x06029d64 func vdp2_SetupScrollRegisters hand provisional named from code/strings
+0x06029d64 func vdp2_SetupScrollRegisters hand provisional verified ctl 11-06
 0x06029e48 func vdp2_Proc_29e48 hand provisional structural name: Proc near vdp2 code, 216 bytes, 5 callees, 1 callers
 0x0602a03c func pal_InitVars_2a03c hand provisional structural name: InitVars near pal code, 54 bytes, 0 callees, 1 callers
 0x0602a078 func pal_FillLoop_2a078 hand provisional structural name: FillLoop near pal code, 88 bytes, 0 callees, 0 callers
@@ -555,7 +555,7 @@
 0x0602a778 func snd_Thunk_2a778 hand provisional structural name: Thunk near snd code, 48 bytes, 1 callees, 1 callers
 0x0602a7b0 func snd_Step_2a7b0 hand provisional structural name: Step near snd code, 64 bytes, 2 callees, 2 callers
 0x0602a80c func snd_Tick_2a80c hand provisional structural name: Tick near snd code, 26 bytes, 1 callees, 0 callers
-0x0602a834 func snd_SetMasterVolume hand provisional scsp volume regs
+0x0602a834 func snd_SetMasterVolume hand provisional scsp volume regs (inconclusive ctl 11-06)
 0x0602a858 func snd_ForEach_2a858 hand provisional structural name: ForEach near snd code, 372 bytes, 2 callees, 3 callers
 0x0602a9f4 func snd_LoopCalc_2a9f4 hand provisional structural name: LoopCalc near snd code, 26 bytes, 0 callees, 1 callers
 0x0602aa14 func snd_Tick_2aa14 hand provisional structural name: Tick near snd code, 22 bytes, 1 callees, 1 callers
@@ -564,7 +564,7 @@
 0x0602ad70 func snd_MathCalc_2ad70 hand provisional structural name: MathCalc near snd code, 610 bytes, 0 callees, 0 callers
 0x0602b008 func snd_ForEach_2b008 hand provisional structural name: ForEach near snd code, 242 bytes, 1 callees, 1 callers
 0x0602b244 func snd_LoopCalc_2b244 hand provisional structural name: LoopCalc near snd code, 50 bytes, 0 callees, 2 callers
-0x0602b2a8 func snd_SendDriverCommand hand provisional smpc and scsp handshake
+0x0602b2a8 func snd_SendDriverCommand hand provisional smpc and scsp handshake (inconclusive ctl 11-06)
 0x0602b380 func snd_FillLoop_2b380 hand provisional structural name: FillLoop near snd code, 198 bytes, 0 callees, 1 callers
 0x0602b478 func snd_FillLoop_2b478 hand provisional structural name: FillLoop near snd code, 164 bytes, 0 callees, 1 callers
 0x0602b5dc func snd_LoopCalc_2b5dc hand provisional structural name: LoopCalc near snd code, 84 bytes, 0 callees, 1 callers
@@ -1050,7 +1050,7 @@
 0x06047ce4 func cpk_Wrapper_47ce4 hand provisional structural name: Wrapper near cpk code, 22 bytes, 1 callees, 1 callers
 0x06047d00 func cpk_Wrapper_47d00 hand provisional structural name: Wrapper near cpk code, 22 bytes, 1 callees, 0 callers
 0x06047d1c func cpk_LoopCalc_47d1c hand provisional structural name: LoopCalc near cpk code, 46 bytes, 0 callees, 3 callers
-0x06047d4c func rtl_Memcpy hand provisional byte copy loop returns dst
+0x06047d4c func rtl_Memcpy hand provisional byte copy loop returns dst (refuted ctl 11-06 (stub no effect))
 0x06047d70 func rtl_FillLoop_47d70 hand provisional structural name: FillLoop near rtl code, 92 bytes, 0 callees, 6 callers
 0x06047dcc func rtl_FillLoop_47dcc hand provisional structural name: FillLoop near rtl code, 36 bytes, 0 callees, 1 callers
 0x06047df0 func rtl_LoopCalc_47df0 hand provisional structural name: LoopCalc near rtl code, 42 bytes, 0 callees, 2 callers
@@ -1125,11 +1125,11 @@
 0x0604a688 func rtl_Dispatch_4a688 hand provisional structural name: Dispatch near rtl code, 98 bytes, 0 callees, 2 callers
 0x0604a89c func rtl_CopyLoop_4a89c hand provisional structural name: CopyLoop near rtl code, 88 bytes, 0 callees, 1 callers
 0x0604a8e8 func rtl_MathCalc_4a8e8 hand provisional structural name: MathCalc near rtl code, 34 bytes, 0 callees, 3 callers
-0x0604a90c func rtl_SignedDivide hand provisional software divide
+0x0604a90c func rtl_SignedDivide hand provisional software divide (refuted ctl 11-06 (stub no effect))
 0x0604aac8 func rtl_Run_4aac8 hand provisional structural name: Run near rtl code, 2236 bytes, 60 callees, 0 callers
 0x0604b3f0 func rtl_Dispatch_4b3f0 hand provisional structural name: Dispatch near rtl code, 112 bytes, 0 callees, 1 callers
-0x0604b480 func rtl_UnsignedDivide hand provisional bitwise divide step unrolled
-0x0604b530 func rtl_Nop hand provisional empty function
+0x0604b480 func rtl_UnsignedDivide hand provisional bitwise divide step unrolled (refuted ctl 11-06 (stub no effect))
+0x0604b530 func rtl_Nop hand provisional empty function (verified ctl 11-06)
 0x0604b558 func rtl_Stub_4b558 hand provisional structural name: Stub near rtl code, 6 bytes, 0 callees, 1 callers
 0x0604b564 func rtl_NopB hand provisional empty function
 0x0604b566 func rtl_Stub_4b566 hand provisional structural name: Stub near rtl code, 2 bytes, 0 callees, 3 callers

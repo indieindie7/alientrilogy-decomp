@@ -12,16 +12,26 @@ F 06004244 slot_LoopCalc_04244 USER_DEFINED 62
 F 0600437c slot_Get_0437c USER_DEFINED 8
 F 06004388 slot_Stub_04388 USER_DEFINED 6
 F 060045b6 debug_PrintVdp1Slot128Table USER_DEFINED 110
+S slot128 at %x
 
+S slot128 at %x
 
 C 060277d6
+S slot64 at %x
 
+S slot64 at %x
 
 C 060277d6
 F 06004740 demo_LoopCalc_04740 USER_DEFINED 88
 F 060047bc debug_PrintVdp1SlotFlags USER_DEFINED 132
+S slotflags is %x slot is %x
+S slotflags is %x slot is %x
 C 060277ae
+S slotflags is %x slot is %x
+S slotflags is %x slot is %x
 C 060277ae
+S slotflags is %x slot is %x
+S slotflags is %x slot is %x
 C 060277ae
 F 0600484c demo_Tick_0484c USER_DEFINED 36
 C 06026874
@@ -41,6 +51,9 @@ C 0600f6cc
 C 0601e074
 C 0600cc10
 C 06025636
+S \\GFX\\DEMO111.BIN
+S \\GFX\\DEMO311.BIN
+S \\GFX\\DEMO211.BIN
 C 06009f98
 F 06004a38 sys_InitVars_04a38 USER_DEFINED 78
 F 06004c44 sys_InitVars_04c44 USER_DEFINED 38
@@ -80,6 +93,10 @@ F 0600724c sys_ForEach_0724c USER_DEFINED 230
 C 060240f4
 F 06007350 password_InitVars_07350 USER_DEFINED 44
 F 06007438 password_DecodeString USER_DEFINED 36
+S LI\\T/QKW.LF/I].K\\W2
+S LI\\T/QKW.LF/I].K\\W2
+S LI\\T/QKW.LF/I].K\\W2
+S I\\T/QKW.LF/I].K\\W2
 F 06007466 password_CheckEntered USER_DEFINED 234
 C 06007438
 C 06047e5c
@@ -89,14 +106,20 @@ C 06007438
 C 06047e5c
 C 06007438
 C 06047e5c
+S FLYT0
+S FLYT0
 C 06047e5c
 C 06047ce4
 F 06007572 password_BuildDisplayString USER_DEFINED 256
+S D!D!D!D!D!
 C 0604b570
 C 0604b530
 C 0604b530
+S fffg00000000
 C 0604b530
 F 060077e0 menu_DrawExitItem USER_DEFINED 36
+S Exit
+S Exit
 C 0600beb0
 F 06007818 menu_Step_07818 USER_DEFINED 30
 C 06047e1c
@@ -146,8 +169,17 @@ F 060086c8 backup_LoadSlotFromCard USER_DEFINED 96
 C 06007350
 C 06022dd8
 C 06008184
+S Error loading from card
+S Error loading from card
 C 06008668
 F 06008762 backup_GetSlotLabel USER_DEFINED 144
+S Unused
+S Unused
+S nused
+S used
+S sed
+S Section   - Level   
+S Section   - Level   
 C 06047d4c
 C 06007572
 F 06008808 backup_Wrapper_08808 USER_DEFINED 20
@@ -171,7 +203,13 @@ C 060086c8
 F 060089a2 backup_SaveSlotToCard USER_DEFINED 112
 C 06007350
 C 06022cc0
+S Game Saved
+S Game Saved
 C 06008668
+S Error saving to card
+S Error saving to card
+S Not Enough Space To Save
+S Not Enough Space To Save
 C 06008668
 F 06008a34 backup_Tick_08a34 USER_DEFINED 28
 C 060089a2
@@ -216,11 +254,13 @@ C 0602cc1c
 C 0602cc0c
 C 0602cdd0
 F 0600a940 gfx_ForEach_0a940 USER_DEFINED 154
+S E(fm5l
 C 0602cc8e
 C 0602cc8e
 C 0602cc92
 C 0602cdd0
 F 0600a9f8 gfx_ForEach_0a9f8 USER_DEFINED 184
+S E(fm5l
 C 0602cc8e
 C 0602cc8e
 C 0602cc92
@@ -281,6 +321,7 @@ C 06020a10
 C 06026f64
 C 06026f64
 F 0600bc28 gfx_Step_0bc28 USER_DEFINED 256
+S E(fm5l
 C 0602cc92
 C 06028f10
 C 0602cdd0
@@ -303,18 +344,29 @@ F 0600c022 gfx_Access_0c022 USER_DEFINED 40
 F 0600c04a gfx_LoopCalc_0c04a USER_DEFINED 38
 F 0600c310 model_LoadBox2SatData USER_DEFINED 1128
 C 06025636
+S Data has not been box2sat processed file is %s
+S Data has not been box2sat processed file is %s
 C 060277e8
 C 0600c022
+S bit depth %x
+S bit depth %x
 C 060277ae
 C 0600c022
 C 06028d06
 C 06028d06
+S unsuported bit depth
+S unsuported bit depth
 C 060277e8
+S unsuported chunk %s
+S unsuported chunk %s
 C 060277e8
 C 060289d4
 C 0600c022
+S \\GFX\\OBJ3D.BND
 C 06028836
 C 0600c022
+S bit depth wrong %x
+S bit depth wrong %x
 C 060277e8
 C 060288f0
 C 060267ec
@@ -325,6 +377,8 @@ C 06026acc
 C 0600c310
 C 06028b34
 F 0600c96e sprite_QueueEntry USER_DEFINED 88
+S TOO MANY SPRITES: INIT IMAGE ADDR
+S TOO MANY SPRITES: INIT IMAGE ADDR
 C 060268d0
 F 0600c9d8 sprite_Step_0c9d8 USER_DEFINED 70
 C 0600c022
@@ -384,12 +438,16 @@ C 0600d02c
 C 0600d124
 C 0600d02c
 F 0600d1f8 gfx_Step_0d1f8 USER_DEFINED 290
+S D!D!D!D!D!D!D!D!D!D!D!
 C 0604b564
 F 0600d328 gfx_Step_0d328 USER_DEFINED 286
+S D!D!D!D!D!D!D!D!D!D!D!
 C 0604b564
 F 0600d454 gfx_Step_0d454 USER_DEFINED 294
+S D!D!D!D!D!D!D!D!D!D!D!
 C 0604b564
 F 0600d588 gfx_Step_0d588 USER_DEFINED 288
+S D!D!D!D!D!D!D!D!D!D!D!
 C 0604b564
 F 0600d6b4 gfx_LoopCalc_0d6b4 USER_DEFINED 110
 F 0600d724 gfx_ForEach_0d724 USER_DEFINED 336
@@ -397,25 +455,41 @@ C 06025636
 C 0600c022
 F 0600d8a0 mesh_LoopCalc_0d8a0 USER_DEFINED 36
 F 0600d96e mesh_BuildVertexLists USER_DEFINED 856
+S vertice start at %x
+S vertice start at %x
 C 060277ae
+S num vertices is %x
+S num vertices is %x
 C 060277ae
+S num blocks is %x
+S num blocks is %x
 C 060277ae
 C 06026a7a
 C 06047d4c
 C 06025a54
 C 0600d8a0
 C 0600d8a0
+S faces start at %x
+S faces start at %x
 C 060277ae
+S faces size is %x
+S faces size is %x
 C 060277ae
+S blocks start at %x
+S blocks start at %x
 C 060277ae
+S num blocks is hex %x
+S num blocks is hex %x
 C 060277ae
 C 0600e31c
 C 06026acc
+S AnimCmds start at %x
+S AnimCmds start at %x
 C 060277ae
 C 0600d6b4
 C 0600ea3c
 C 0601e1ac
-F 0600dd44 map_GetTileActionAt USER_DEFINED 140
+F 0600dd44 map_LookupTileCell USER_DEFINED 140
 F 0600dee0 mesh_MathCalc_0dee0 USER_DEFINED 96
 F 0600df48 mesh_MathCalc_0df48 USER_DEFINED 72
 F 0600dff4 mesh_MathCalc_0dff4 USER_DEFINED 72
@@ -423,15 +497,25 @@ F 0600e0a0 mesh_LoopCalc_0e0a0 USER_DEFINED 46
 F 0600e0d8 mesh_FillLoop_0e0d8 USER_DEFINED 268
 F 0600e1f0 mesh_LoopCalc_0e1f0 USER_DEFINED 156
 F 0600e31c mesh_UploadVertices USER_DEFINED 1018
+S vindex
+S vindex
 C 06026a7a
+S sram vertecies
+S sram vertecies
 C 06026a7a
 C 06023808
 C 0600e824
 C 0600e824
 C 0600e824
 C 0600e824
+S too many verticies increase MAX_VERTEX processed %x
+S too many verticies increase MAX_VERTEX processed %x
 C 060277e8
+S number of beta verticies %x
+S number of beta verticies %x
 C 060277ae
+S biggest BB had %x verticies
+S biggest BB had %x verticies
 C 060277ae
 C 0600e794
 C 0600e794
@@ -448,8 +532,14 @@ C 0600e770
 F 0600e770 mesh_Access_0e770 USER_DEFINED 10
 F 0600e794 mesh_CheckVertexMatch USER_DEFINED 124
 C 0604b558
+S failedx
+S failedx
 C 060277e8
+S failedy
+S failedy
 C 060277e8
+S failedz
+S failedz
 C 060277e8
 F 0600e824 mesh_LoopCalc_0e824 USER_DEFINED 236
 F 0600e918 mesh_SetupObj_0e918 USER_DEFINED 188
@@ -475,13 +565,16 @@ F 0600f11c mesh_ForEach_0f11c USER_DEFINED 1092
 C 06006aac
 C 06006aac
 F 0600f5d8 mesh_ForEach_0f5d8 USER_DEFINED 188
+S dHdI
 C 060237c4
 C 060237c4
 C 060237c4
 C 060237c4
 C 060237cc
 F 0600f6cc mesh_ForEach_0f6cc USER_DEFINED 190
+S dHdI
 C 060237c4
+S dHdI
 C 060237c4
 C 060270a2
 C 0600f5d8
@@ -520,11 +613,15 @@ F 06010de6 enemy_DecodeAndSpawnCheck USER_DEFINED 278
 C 06004244
 C 06004244
 C 06004244
+S WARNING: Enemy %d has initial power %d
 
+S WARNING: Enemy %d has initial power %d
 
 C 06027740
 C 06010040
+S WARNING: Enemy %d not generated
 
+S WARNING: Enemy %d not generated
 
 C 06027740
 F 06010f28 enemy_Tick_10f28 USER_DEFINED 28
@@ -581,6 +678,7 @@ F 0601283c enemy_ObjProc_1283c USER_DEFINED 124
 C 060120f4
 C 0601251c
 F 060128f0 enemy_ObjProc_128f0 USER_DEFINED 102
+S D!D!D!D!D!D!D!D!
 C 0604b56a
 C 06010f50
 F 06012a3c enemy_Access_12a3c USER_DEFINED 62
@@ -645,9 +743,14 @@ F 06014270 enemy_SetupObj_14270 USER_DEFINED 328
 F 060143c4 enemy_SetupObj_143c4 USER_DEFINED 132
 F 06015e20 obj_Step_15e20 USER_DEFINED 200
 C 06010040
+S D!D!D!D!D!D!D!D!
 C 0604b56a
 C 06013f28
 F 06016208 hazard_SteamValveStep USER_DEFINED 288
+S Steam valve closed
+S Steam valve closed
+S Flame jet shut down
+S Flame jet shut down
 C 0601891c
 C 06013404
 F 06016444 hazard_ObjProc_16444 USER_DEFINED 52
@@ -690,6 +793,7 @@ C 06038224
 C 060380fc
 C 060380b4
 C 060380d8
+S D!D!D!D!D!D!D!D!
 C 0604b56a
 C 0604b56a
 C 0603835c
@@ -714,7 +818,7 @@ C 0602cdd0
 C 0602cc1c
 C 0602cbcc
 C 0602cdd0
-F 0601823c obj_Run_1823c USER_DEFINED 490
+F 0601823c hud_DrawAmmoBarByMode_1823c USER_DEFINED 490
 C 0602a0ec
 C 0602cc1c
 C 0602cbcc
@@ -731,9 +835,11 @@ C 06017df4
 F 060184d0 obj_Stub_184d0 USER_DEFINED 4
 F 060184d4 obj_Step_184d4 USER_DEFINED 174
 C 06028f10
+S E(fm5l
 C 0602cc92
 C 0602cdd0
 F 060185f8 obj_ForEach_185f8 USER_DEFINED 358
+S E(fm5l
 C 0602cc92
 C 06028f10
 C 06028f10
@@ -750,6 +856,7 @@ F 06018dd6 obj_SetupObj_18dd6 USER_DEFINED 10
 F 06018de4 obj_ForEach_18de4 USER_DEFINED 50
 C 06018dd6
 F 06018e28 obj_ForEach_18e28 USER_DEFINED 186
+S dHdI
 C 060237c4
 C 060237c4
 C 060237c4
@@ -810,8 +917,10 @@ C 0604b56a
 C 0604b570
 C 0601d1d4
 F 0601a570 obj_Tick_1a570 USER_DEFINED 172
+S D!D!D!D!D!D!D!D!D!D!D!
 C 0604b564
 F 0601a638 obj_Tick_1a638 USER_DEFINED 166
+S D!D!D!D!D!D!D!D!D!D!D!
 C 0604b564
 F 0601a6fc obj_Get_1a6fc USER_DEFINED 8
 F 0601a708 obj_InitVars_1a708 USER_DEFINED 204
@@ -819,7 +928,9 @@ F 0601a7e8 obj_InitVars_1a7e8 USER_DEFINED 100
 F 0601a854 obj_InitVars_1a854 USER_DEFINED 74
 F 0601a8ac obj_InitVars_1a8ac USER_DEFINED 76
 F 0601a908 obj_Step_1a908 USER_DEFINED 74
+S D!D!D!D!D!D!
 C 0604b56e
+S D!D!D!D!D!D!
 C 0604b56e
 F 0601a964 obj_InitVars_1a964 USER_DEFINED 76
 F 0601a9bc obj_InitVars_1a9bc USER_DEFINED 46
@@ -871,22 +982,24 @@ C 060184d0
 F 0601b834 obj_Step_1b834 USER_DEFINED 110
 C 0600b8f0
 C 0601d1d4
-F 0601b8bc demo_Step_1b8bc USER_DEFINED 154
+F 0601b8bc game_Step_1b8bc USER_DEFINED 154
 C 0600b8f0
 C 0601d1d4
-F 0601b974 demo_Wrapper_1b974 USER_DEFINED 16
+F 0601b974 game_Wrapper_1b974 USER_DEFINED 16
 C 0601b8bc
-F 0601b988 demo_Step_1b988 USER_DEFINED 58
+F 0601b988 game_Step_1b988 USER_DEFINED 58
 C 0601b974
-F 0601b9d4 demo_TickTimers USER_DEFINED 196
+F 0601b9d4 game_TickFrameTimers USER_DEFINED 196
 C 0601a334
 C 0601d1d4
 C 0601a334
 C 0601d1d4
 C 06017fb0
 C 0601823c
+S D E M O
+S D E M O
 C 0601f448
-F 0601badc demo_Tick_1badc USER_DEFINED 232
+F 0601badc game_Tick_1badc USER_DEFINED 232
 C 0601a334
 C 06031750
 C 0601a374
@@ -934,19 +1047,26 @@ F 0601cf44 sfx_Stub_1cf44 USER_DEFINED 4
 F 0601cf5a sfx_LoadTempBank USER_DEFINED 84
 C 0601d066
 C 0601cfe2
+S load temp SFX
+S load temp SFX
 C 060277ae
 C 06025636
 C 0602b478
 C 060267ec
 F 0601cfe2 sfx_LoadPermBank USER_DEFINED 62
+S load perm SFX
+S load perm SFX
 C 060277ae
 C 06025636
+S \\SFX\\PERMSFX.BIN
 C 0602b380
 C 060267ec
 F 0601d03c sfx_Stub_1d03c USER_DEFINED 4
 F 0601d040 sfx_Set_1d040 USER_DEFINED 12
 F 0601d066 sfx_LoadSoundDriver USER_DEFINED 64
 C 0601d040
+S \\SFX\\SND_DRV.BIN
+S \\SFX\\SND_DRV.BIN
 C 06025636
 C 06025330
 C 0602b2a8
@@ -969,6 +1089,7 @@ F 0601d22c obj_Step_1d22c USER_DEFINED 32
 C 0604b530
 F 0601d258 obj_Step_1d258 USER_DEFINED 194
 C 0600d02c
+S D!D!D!D!D!D!
 C 0604b56e
 C 060283fc
 F 0601d380 obj_Wrapper_1d380 USER_DEFINED 16
@@ -981,6 +1102,7 @@ C 0601d3d0
 F 0601d5a8 obj_InitVars_1d5a8 USER_DEFINED 248
 F 0601d814 obj_SetupObj_1d814 USER_DEFINED 258
 F 0601df44 mesh_ForEach_1df44 USER_DEFINED 234
+S dHdI
 C 060237c4
 C 060237c4
 C 060237c4
@@ -988,10 +1110,16 @@ C 060237c4
 C 060237cc
 C 060237cc
 C 060237cc
+S did %dd faces
+S did %dd faces
 C 060277ae
+S last face+1 %x
+S last face+1 %x
 C 060277ae
 F 0601e074 mesh_ForEach_1e074 USER_DEFINED 144
+S dHdI
 C 060237c4
+S dHdI
 C 060237c4
 C 0601df44
 C 060378a8
@@ -1052,6 +1180,8 @@ C 0600cec0
 C 0600cec0
 C 06023a78
 C 0601ef5c
+S D!D!D!D!D!D!D!D!
+S D!D!D!D!D!D!D!D!
 C 0604b56a
 C 0604b56a
 C 06008300
@@ -1071,12 +1201,14 @@ C 0602cbcc
 C 0602cc1c
 C 0602cdd0
 F 0601f930 mesh_Tick_1f930 USER_DEFINED 248
+S D!D!D!D!D!D!D!D!
 C 0604b56a
 C 0604b56a
 C 0602cc1c
 C 0602cb5c
 C 0602cdd0
 F 0601fa68 mesh_Run_1fa68 USER_DEFINED 560
+S D!D!D!D!D!D!D!D!
 C 0604b56a
 C 0602cb6c
 C 0602cc1c
@@ -1091,21 +1223,47 @@ C 0602cdd0
 F 0601fd32 mesh_Step_1fd32 USER_DEFINED 102
 C 06047d70
 F 06020140 options_RunVolumeMenu USER_DEFINED 406
+S SFX VOLUME
+S SFX VOLUME
+S CDDA VOLUME
+S CDDA VOLUME
 C 0601f448
 C 0601f8a8
 C 0601f448
+S ARE YOU SURE ?
+S ARE YOU SURE ?
 C 0601f448
+S Yes
+S Yes
 C 0601f448
 C 0601f448
 F 06020346 hud_DrawAutoMapperInventory USER_DEFINED 626
 C 06047d70
+S Auto Mapper
+S Auto Mapper
+S 9mm Pistol
+S 9mm Pistol
 C 0601f448
 C 0601f8a8
 C 0601f4b4
+S 9mm Pistol
+S 9mm Pistol
+S Auto Mapper
+S Auto Mapper
 C 0601f8a8
+S 9mm Pistol
+S 9mm Pistol
+S Auto Mapper
+S Auto Mapper
+S 9mm Pistol
+S 9mm Pistol
 C 0601f448
 C 0601f8a8
 C 0601fd32
+S Not available
+S Not available
+S Selected
+S Selected
 C 0601f448
 C 06020140
 C 0601f780
@@ -1252,25 +1410,34 @@ F 06022af4 hud_ForEach_22af4 USER_DEFINED 154
 C 06047e3c
 C 060225b0
 C 060228d8
-F 06022ba4 backup_ForEach_22ba4 USER_DEFINED 152
+F 06022ba4 hud_ForEach_22ba4 USER_DEFINED 152
 C 060226e8
 F 06022c48 backup_ForEach_22c48 USER_DEFINED 100
 C 060228d8
 F 06022cc0 backup_FindOrCreateFile USER_DEFINED 246
 C 0602679c
+S ALIENTRILGY
+S ALIENTRILGY
 C 06024118
 C 06024094
 C 06022ba4
+S ALIENTRILGY
 C 060241c4
+S ALIENTRILGY
 C 06024178
+S ALIENTRILGY
 C 060267ec
 F 06022dd8 backup_OpenFile USER_DEFINED 104
 C 0602679c
+S ALIENTRILGY
+S ALIENTRILGY
 C 06024118
 C 06022c48
 C 060267ec
 F 06022eec backup_ReadHeader USER_DEFINED 140
 C 0602679c
+S ALIENTRILGY
+S ALIENTRILGY
 C 06024118
 C 060267ec
 F 06022f8c backup_ForEach_22f8c USER_DEFINED 232
@@ -1315,6 +1482,8 @@ F 06023fec smpc_IssueCommand1ABis USER_DEFINED 86
 F 06024050 smpc_Access_24050 USER_DEFINED 20
 F 06024068 smpc_Calc_24068 USER_DEFINED 38
 F 06024094 smpc_ReadBlockChecked USER_DEFINED 74
+S ALIENTRILGY
+S ALIENTRILGY
 C 06023fd4
 F 060240f4 smpc_Access_240f4 USER_DEFINED 26
 F 06024118 smpc_Step_24118 USER_DEFINED 44
@@ -1351,7 +1520,7 @@ F 06024618 vdp1_Tick_24618 USER_DEFINED 42
 C 06025cb8
 C 06025cf0
 F 06024664 vdp1_Get_24664 USER_DEFINED 10
-F 06024674 vdp1_SubmitCommandCounter USER_DEFINED 32
+F 06024674 sys_CallAndIncTickCounter USER_DEFINED 32
 C 0603bcc8
 F 060246dc vdp1_ForEach_246dc USER_DEFINED 62
 C 06047d4c
@@ -1393,27 +1562,42 @@ C 06047d4c
 C 06024a50
 F 06024b30 vdp1_ResetState USER_DEFINED 30
 F 06024c20 cpk_OpenPlogo USER_DEFINED 92
+S cpk1
+S cpk1
 C 06026a7a
+S cpk2
+S cpk2
 C 06026a7a
+S cpk3
+S cpk3
 C 06026a7a
+S guarad
+S guarad
 C 06026a7a
 F 06024cb4 cpk_ForEach_24cb4 USER_DEFINED 40
 C 06026acc
 F 06024ce4 cpk_StartMovieById USER_DEFINED 98
 C 06024c20
+S PLOGO.CPK
 C 06024db8
 C 06024cb4
 C 06027b44
 F 06024db8 cpk_InitCinepakPlayer USER_DEFINED 646
 C 060469b4
+S CINEPAK init error
 
+S CINEPAK init error
 
 C 060277ae
+S CINEPAK ERROR
 
+S CINEPAK ERROR
 
 C 060277ae
 C 06026acc
 C 0602524e
+S cpk
+S cpk
 C 06026a7a
 C 0603809c
 C 060380a8
@@ -1421,6 +1605,7 @@ C 0602cd44
 C 0602ccac
 C 0602cbcc
 C 0602cdbc
+S E(fm5l
 C 0602cc92
 C 0602ce34
 C 0602cdbc
@@ -1453,10 +1638,18 @@ C 0604703c
 C 06046ea4
 C 06046db8
 F 0602524e cpk_UpdatePlayback USER_DEFINED 154
+S cpk4
+S cpk4
 C 06026a7a
+S cpk5
+S cpk5
 C 06026a7a
 C 0601d040
+S \\CPK\\SDDRV.TSK
+S \\CPK\\SDDRV.TSK
 C 0602591c
+S \\CPK\\BOOTSND.MAP
+S \\CPK\\BOOTSND.MAP
 C 0602591c
 C 06041ae0
 C 06026acc
@@ -1467,6 +1660,8 @@ C 0603ceec
 F 060253c6 cd_InitSystem USER_DEFINED 114
 C 0604b584
 C 0603c184
+S Can't init CD system
+S Can't init CD system
 C 060277e8
 C 0602538c
 C 06025470
@@ -1475,31 +1670,47 @@ F 060254b0 cd_LoopCalc_254b0 USER_DEFINED 52
 F 060254f2 cd_FindFileEntry USER_DEFINED 248
 C 060254b0
 C 0603c384
+S error
+S error
 C 060277e8
 C 0603c284
 C 060236ac
 C 06025470
 F 06025636 cd_LoadFile USER_DEFINED 194
+S loading %s
+S loading %s
 C 060277ae
+S error
+S error
 C 060277e8
 C 060254f2
 C 0603c324
 C 0603c384
+S error
+S error
 C 060277e8
 C 0603c434
 C 0603c6e8
 C 0602679c
 C 0603c75c
+S not found %s
+S not found %s
 C 060277e8
 C 0603c4d8
 C 0603c324
 C 060236ac
 F 06025744 cd_LoadFileHigh USER_DEFINED 158
+S loading HIGH %s
+S loading HIGH %s
 C 060277ae
+S error
+S error
 C 060277e8
 C 060254f2
 C 0603c324
 C 0603c384
+S error
+S error
 C 060277e8
 C 0603c434
 C 0603c6e8
@@ -1507,16 +1718,24 @@ C 0603c4d8
 C 0603c324
 C 060236ac
 F 06025814 cd_LoadFileHighAlt USER_DEFINED 200
+S loading HIGH %s
+S loading HIGH %s
 C 060277ae
+S error
+S error
 C 060277e8
 C 060254f2
 C 0603c324
 C 0603c384
+S error
+S error
 C 060277e8
 C 0603c434
 C 0603c6e8
 C 06026a7a
 C 0603c75c
+S not found %s
+S not found %s
 C 060277e8
 C 0603c4d8
 C 0603c324
@@ -1525,18 +1744,30 @@ F 06025918 cd_Stub_25918 USER_DEFINED 4
 F 0602591c cd_Step_2591c USER_DEFINED 24
 C 06025636
 F 0602598a cd_LoadFileForVdp2 USER_DEFINED 106
+S loading %s (for panvdp2)
+S loading %s (for panvdp2)
 C 060277ae
 C 0603c384
+S error
+S error
 C 060277e8
 C 0603c434
 C 0603c75c
+S error
+S error
 C 060277e8
 C 0603c4d8
 F 06025a54 unpack_Implode USER_DEFINED 102
+S pre implode size is %x
+S pre implode size is %x
 C 060277ae
+S implode error
+S implode error
 C 060277e8
 C 06047d4c
 C 060267ec
+S post implode size is %x
+S post implode size is %x
 C 060277ae
 F 06025ad8 cd_ForEach_25ad8 USER_DEFINED 84
 C 06025d88
@@ -1550,6 +1781,8 @@ C 06025df0
 C 06025e48
 C 06025d9a
 C 06025fe8
+S no more space
+S no more space
 C 060277e8
 F 06025c80 heap_Step_25c80 USER_DEFINED 48
 C 06025db8
@@ -1568,7 +1801,11 @@ F 06025db8 heap_Access_25db8 USER_DEFINED 36
 F 06025de4 heap_Access_25de4 USER_DEFINED 12
 F 06025df0 heap_Access_25df0 USER_DEFINED 12
 F 06025e48 heap_FindFreeBlock USER_DEFINED 94
+S next = this!! error at block 0x%x
+S next = this!! error at block 0x%x
 C 060277e8
+S that ram all gone bug, wanted %x got %x
+S that ram all gone bug, wanted %x got %x
 C 060277e8
 F 06025eb4 heap_LoopCalc_25eb4 USER_DEFINED 28
 F 06025ed4 heap_ForEach_25ed4 USER_DEFINED 122
@@ -1599,7 +1836,14 @@ C 060265c4
 F 06026658 bup_OpenDevice USER_DEFINED 116
 C 06024210
 C 06024210
+S bu00:
+S bu00:
+S bu00:
+S bu10:
+S bu10:
 F 0602679c gal_AllocBytes USER_DEFINED 60
+S Out of Gregs memory
+S Out of Gregs memory
 C 060268d0
 F 060267ec bup_SetupObj_267ec USER_DEFINED 32
 F 06026818 bup_CopyLoop_26818 USER_DEFINED 76
@@ -1607,19 +1851,27 @@ F 06026874 bup_CopyLoop_26874 USER_DEFINED 74
 F 060268d0 bup_Thunk_268d0 USER_DEFINED 14
 C 060277e8
 F 0602693a gal_ReportAllocError USER_DEFINED 18
+S GAL allcoation error #%d
+S GAL allcoation error #%d
 C 060277e8
 F 06026a7a gal_AllocOrFail USER_DEFINED 50
 C 06025bfa
+S error allocating
+S error allocating
 C 060277e8
 C 06025c80
 F 06026acc gal_UnlockOrFail USER_DEFINED 38
 C 06025cb8
+S error unlocking
+S error unlocking
 C 060277e8
 C 06025cf0
 F 06026ecc bup_ForEach_26ecc USER_DEFINED 60
 C 06026acc
 C 06026f9c
 F 06026f2c gal_PushHandle USER_DEFINED 40
+S to many fe handles
+S to many fe handles
 C 060277e8
 F 06026f64 bup_Tick_26f64 USER_DEFINED 42
 C 06026acc
@@ -1629,8 +1881,12 @@ F 06026fc4 bup_Get_26fc4 USER_DEFINED 8
 F 06027014 vdp1_ForEach_27014 USER_DEFINED 40
 C 06025eb4
 F 060270a2 gal_MoveHighBlock USER_DEFINED 82
+S move hi
+S move hi
 C 06026a7a
 C 06047d4c
+S move high problem
+S move high problem
 C 060277e8
 F 06027180 vdp1_Access_27180 USER_DEFINED 18
 F 060271a4 vdp1_Get_271a4 USER_DEFINED 10
@@ -1724,6 +1980,8 @@ C 0602b244
 C 060283cc
 C 0602b008
 F 060286fe fx_KillEffect USER_DEFINED 42
+S fx killed
+S fx killed
 C 060277ae
 C 0602b5dc
 F 06028744 fx_Stub_28744 USER_DEFINED 4
@@ -1753,9 +2011,13 @@ C 06028c42
 F 06028b34 pal_Access_28b34 USER_DEFINED 18
 F 06028b90 pal_FindRepeat16Clut USER_DEFINED 96
 C 06047d1c
+S found repeat 16clut
+S found repeat 16clut
 C 060277ae
 F 06028c42 pal_ReportDQClut16 USER_DEFINED 26
 C 06026fa8
+S DQclut16
+S DQclut16
 C 06026a7a
 F 06028c68 pal_Tick_28c68 USER_DEFINED 46
 C 06047d4c
@@ -1763,13 +2025,19 @@ C 060289d4
 F 06028d06 pal_AllocClutColours USER_DEFINED 246
 C 06047d1c
 C 06047d4c
+S exceded Saturn colour ram
+S exceded Saturn colour ram
 C 060277e8
+S warning clut16 has colour in ink 0
+S warning clut16 has colour in ink 0
 C 060277ae
 C 06028b90
 C 06028b00
 C 06047d4c
 C 06029274
 C 06029274
+S unrecoginsed bit depth %x
+S unrecoginsed bit depth %x
 C 060277e8
 F 06028e38 pal_Step_28e38 USER_DEFINED 34
 C 06047d4c
@@ -1934,15 +2202,23 @@ F 0602cf00 vram_SetupObj_2cf00 USER_DEFINED 34
 F 0602cfa4 vram_Tick_2cfa4 USER_DEFINED 32
 C 06026acc
 F 0602cff2 vram_AllocSlotReport USER_DEFINED 410
+S space for %x 3232 %x 3240 %x 3264
+S space for %x 3232 %x 3240 %x 3264
 C 060277ae
 F 0602d1c8 vram_ReportSubdivFree USER_DEFINED 72
 C 06027014
+S free for subdiv is %x
+S free for subdiv is %x
 C 060277ae
+S subdivvram
+S subdivvram
 C 06026a7a
 C 0602cff2
 F 0602d238 vram_SetupObj_2d238 USER_DEFINED 60
 F 0602d278 vram_Stub_2d278 USER_DEFINED 6
 F 0602d29a vram_UseSlot USER_DEFINED 798
+S using slot %x size %x
+S using slot %x size %x
 C 060277ae
 F 0602d704 vram_CopyLoop_2d704 USER_DEFINED 390
 F 0602d8dc vram_SetupObj_2d8dc USER_DEFINED 328
@@ -1973,6 +2249,7 @@ C 0602d8dc
 C 06023b06
 C 0602d278
 C 0602f0a8
+S D!D!D!D!D!
 C 0604b570
 C 0602cdbc
 F 0602f64c mesh_ForEach_2f64c USER_DEFINED 1284
@@ -1990,11 +2267,16 @@ C 0602cdbc
 F 06030be0 mesh_Get_30be0 USER_DEFINED 8
 F 06030bec mesh_LoopCalc_30bec USER_DEFINED 86
 F 06030c5c mesh_ReportCoordsExceeded USER_DEFINED 240
+S scoords exceded
+S scoords exceded
 C 060277e8
 C 06023b06
 F 06030d80 debug_PrintJjj USER_DEFINED 114
+S jjj %x %x   %x
 C 060277e8
+S jjj %x %x   %x
 C 060277ae
+S jjj %x %x   %x
 F 06030f10 mesh_CopyLoop_30f10 USER_DEFINED 60
 F 06030f68 mesh_ForEach_30f68 USER_DEFINED 130
 C 0604b530
@@ -2005,19 +2287,33 @@ C 0604b530
 C 060263b4
 F 060312c2 anim_LoadQueenDisplayList USER_DEFINED 604
 C 0604b530
+S queen problem %x
+S queen problem %x
 C 060277ae
 C 060277fc
 C 0604b530
+S queen DL to %x size %x frame %x
+S queen DL to %x size %x frame %x
 C 060277ae
 C 060263b4
 C 060263b4
 C 0604b530
+S queen problem
+S queen problem
 C 060277e8
 C 0604b530
+S queen DL to %x size %x frame %x
+S queen DL to %x size %x frame %x
 C 060277ae
 F 06031578 spr_AllocSpbuf USER_DEFINED 108
+S spbuf1
+S spbuf1
 C 06026a7a
+S spbuf2
+S spbuf2
 C 06026a7a
+S spbuf1
+S spbuf1
 C 06026a7a
 F 06031610 spr_LoopCalc_31610 USER_DEFINED 288
 F 06031750 spr_ObjProc_31750 USER_DEFINED 76
@@ -2104,9 +2400,13 @@ C 06023a78
 F 06034410 poly_ObjProc_34410 USER_DEFINED 172
 C 0603835c
 F 060357f8 poly_ForEach_357f8 USER_DEFINED 268
+S dHdI
 C 060237c4
+S dHdI
 C 060237c4
+S dHdI
 C 060237c4
+S dHdI
 C 060237c4
 C 060237cc
 C 060237cc
@@ -2216,14 +2516,17 @@ F 060380fc poly_SetupObj_380fc USER_DEFINED 16
 F 06038126 poly_Thunk_38126 USER_DEFINED 14
 C 0604b5e4
 F 06038138 poly_ForEach_38138 USER_DEFINED 122
+S D!D!D!D!D!D!D!D!D!D!D!
 C 0604b564
 C 0604b564
 C 0604b564
 F 060381b8 poly_Step_381b8 USER_DEFINED 104
+S D!D!D!D!D!D!D!D!D!D!D!
 C 0604b564
 C 0604b564
 C 0604b564
 F 06038224 poly_Run_38224 USER_DEFINED 298
+S D!D!D!D!D!D!D!D!D!D!D!
 C 0604b564
 C 0604b564
 C 0604b564
@@ -2582,6 +2885,7 @@ F 0603da4c gfs_ObjProc_3da4c USER_DEFINED 146
 C 0603e458
 C 0603ebc4
 C 06040358
+S PHQI
 C 0603db78
 F 0603daf4 gfs_ObjProc_3daf4 USER_DEFINED 86
 C 0603e2a8
@@ -2591,15 +2895,20 @@ C 0603e550
 C 0603ebc4
 F 0603db78 gfs_Stub_3db78 USER_DEFINED 8
 F 0603db80 gfs_Run_3db80 USER_DEFINED 258
+S PHQI
 C 0603db78
+S PHQI
 C 0603db78
 C 0603e458
 C 0603ebc4
+S PHQI
 C 0603db78
 C 0603e550
 C 0603ebc4
+S PHQI
 C 0603db78
 C 0603db54
+S PHQI
 C 0603db78
 F 0603dde4 gfs_Wrapper_3dde4 USER_DEFINED 18
 C 0603e638
@@ -2878,7 +3187,9 @@ C 0603de70
 F 06040200 gfs_ObjProc_40200 USER_DEFINED 262
 C 0603e8c0
 C 0604073c
+S D!D!D!D!D!D!D!D!D!D!
 C 0604b566
+S D!D!D!D!D!D!D!D!D!D!
 C 0604b566
 C 0603d92c
 F 06040320 gfs_ObjProc_40320 USER_DEFINED 48
@@ -2900,9 +3211,11 @@ C 0603e5cc
 F 0604073c gfs_Access_4073c USER_DEFINED 58
 F 0604077c gfs_Access_4077c USER_DEFINED 40
 F 060407dc gfs_ObjProc_407dc USER_DEFINED 290
+S PHQI
 C 0603db78
 C 06040668
 C 0603da4c
+S PHQI
 C 0603db78
 C 06040668
 F 06040918 gfs_Proc_40918 USER_DEFINED 102
@@ -3056,6 +3369,7 @@ F 06042d38 snd_Step_42d38 USER_DEFINED 64
 C 0604326e
 F 06042e14 snd_Proc_42e14 USER_DEFINED 278
 C 060434f4
+S D!D!D!D!D!D!D!D!D!D!
 C 0604b566
 C 0603c964
 C 0603cc00
@@ -3074,15 +3388,23 @@ C 06047190
 C 06044fe0
 C 060430b0
 C 0604304c
+S CPK system is initialized. 
+S CPK system is initialized. 
 C 06047d4c
 F 0604318c cpk_ReportNotRunning USER_DEFINED 74
 C 06043480
+S CPK system is not running.
+S CPK system is not running.
 C 06047d4c
 F 060431f4 cpk_ReportInitialisedB USER_DEFINED 80
+S CPK system is initialized. 
+S CPK system is initialized. 
 C 06047df0
 C 060471b4
 C 06046144
 F 0604326e cpk_StartSystem USER_DEFINED 446
+S CPK system is initialized. 
+S CPK system is initialized. 
 C 06047df0
 C 06043068
 F 06043480 cpk_Step_43480 USER_DEFINED 88
@@ -3124,6 +3446,8 @@ C 0604a5f8
 C 0604a5f8
 C 0604a5f8
 F 06043b7e cpk_ParseFilmHeader USER_DEFINED 514
+S FILM
+S FILM
 C 06047e5c
 C 06043a88
 C 06043068
@@ -3331,6 +3655,7 @@ C 06043068
 F 0604703c cpk_Step_4703c USER_DEFINED 110
 C 06043068
 C 0604365a
+S D!D!D!D!D!D!D!D!D!D!
 C 0604b566
 F 060470c0 cpk_Step_470c0 USER_DEFINED 30
 C 06043068
@@ -3435,7 +3760,9 @@ C 06048f18
 F 06048c1c rtl_Wrapper_48c1c USER_DEFINED 26
 C 06048f18
 F 06048c56 sys_HeapStackCollision USER_DEFINED 70
+S Heap and stack collision
 
+S Heap and stack collision
 
 C 06048bfc
 C 06048e54
